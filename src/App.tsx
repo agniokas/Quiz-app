@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {QuestionState, Difficulty, fetchQuizQuestions} from "./API";
 import QuestionCard from "./components/QuestionCard";
 
+import "./App.css"
+
 const TOTAL_QUESTIONS = 10;
 
 export type AnswerObject = {
@@ -34,7 +36,6 @@ const App = () => {
         setLoading(false);
     }
 
-    console.log(questions)
     const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (!gameOver) {
             //users answer
